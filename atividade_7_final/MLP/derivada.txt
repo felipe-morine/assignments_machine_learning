@@ -1,0 +1,40 @@
+softmax = exp(i) / sum(exp(i))
+
+derivada_saida:
+
+ns =  numero camada de saida
+e = erro
+gs = output da funcao de ativacao do neuronio de saida s
+g' = derivada
+zj = output da funcao de ativacao do neuronio escondido j
+
+d J/d bij = 1/N sum (n to N) sum (s to ns) es * g's * zj
+
+
+if s == i:
+   g's = gs - (gs*gs)
+else:
+   g's = -(gs*gi)
+
+
+derivada_escondida
+
+y's = derivada do valor de entrada no neuronio de saida s
+
+
+d J/d aij = 1/N sum (n to N) sum (s to ns)
+      	    	       	     es * gs * (y's - ((sum t to ns: y't * gt))
+
+
+nh = numero camada escondida
+f'h = derivada da funcao de ativacao dp neuronio escondido h
+
+y't/d aij = sum h to nh: bth * f'h * xij
+
+if h == i:
+   g'h = gh - (gh*gh)
+else:
+   g'h = -(gh*gi)
+
+
+      	   
